@@ -20,9 +20,15 @@ img{
 }
 body{
     color: var(--text-color);
+    background-image: url("image-from-rawpixel-id-558805-jpeg.jpg"); /* ==> */
 }
 .container{
     max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+.head-container{
+    max-width: 1568px;
     margin: auto;
     width: 100%;
 }
@@ -35,6 +41,7 @@ header{
     left: 0;
     width: 100%;
     background: var(--bg-color);
+    background: linear-gradient(150deg, #b33c6e, #add8e6); /* ==> */
     box-shadow: 0 1px 4px hsl(0, 4%, 15% / 10%);
     z-index: 100;
 }
@@ -62,6 +69,8 @@ header{
     min-height: 100vh;
     padding: 20px;
     background: var(--bg-color);
+    /*backdrop-filter: blur(10px);*/
+    background-color: rgba(255, 255, 255, 0.6); /* ==> */
     box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
     transition: 0.3s;
 }
@@ -162,25 +171,30 @@ header{
 }
 .product-box{
     position: relative;
+    background-color: rgba(255, 255, 255, 0.6); /* ==> */
+    border-radius: 10px; /* ==> */
 }
 .product-box:hover{
     padding: 10px;
-    border: 1px solid var(--text-color);
+    border: 1px solid #add8e6;
     transition: 0.4s;
 }
 .product-img{
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
+    border-radius: 10px; /* ==> */
 }
 .product-title{
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    margin-left: 10px; /* ==> */
 }
 .price{
     font-weight: 500;
+    margin-left: 10px; /* ==> */
 }
 .add-cart{
     position: absolute;
@@ -190,7 +204,10 @@ header{
     color: var(--bg-color);
     padding: 10px;
     cursor: pointer;
+    border-radius: 10px; /* ==> */
+    font-size: 1.3rem;
 }
 .add-cart:hover{
     background: hsl(249, 32%, 17%);
+    background: var(--main-color);
 }
