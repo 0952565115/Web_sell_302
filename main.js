@@ -40,16 +40,27 @@ function ready() {
         button.addEventListener("click", addCartClicked);
     }
     // Buy Button Work
-    document
-    .getElementsByClassName("btn-buy")[0]
-    .addEventListener("click", buyButtonClicked);
+    document.querySelector(".btn-buy").addEventListener("click", buyButtonClicked);
 }
 // Buy Button
 function buyButtonClicked() {
-    alert("Your Order is placed")
-    var cartContent = document.getElementsByClassName("cart-content")[0]
+    var cartContent = document.getElementsByClassName("cart-content")[0];
+    if (cartContent.childElementCount === 0) {
+        alert("Your cart is empty. Add items to your cart before placing an order.");
+        return;
+    }
+    var name = document.getElementById("name").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var zipcode = document.getElementById("zipcode").value;
+
+    if (!name || !address || !city || !zipcode) {
+        alert("Please fill in all shipping information before placing an order.");
+        return;
+    }
+    alert("Your Order is placed");
     while (cartContent.hasChildNodes()) {
-        cartContent.removeChild(cartContent.firstChild)
+        cartContent.removeChild(cartContent.firstChild);
     }
     Updatetotal();
 }
@@ -121,13 +132,26 @@ function Updatetotal() {
         var quantity = quantityElement.value;
         total = total + (price * quantity);
     }
+    
     // Apply discount if total is over 1000
+    var discount = 0;
+    var fulltotal = parseFloat(total)
+    
     if (total > 1000) {
         var discount = total * 0.1; // 10% discount
         total -= discount;
     }
-        // If price Contain some Cents Value
-        total = Math.round(total * 100) / 100;
 
-        document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+    // If price contains some cents value
+    total = Math.round(total * 100) / 100;
+
+    // Update discount and total elements
+    var maxsumElement = document.querySelector(".full-total-price");
+    maxsumElement.innerText = "$" + fulltotal.toFixed(2);
+
+    var discountElement = document.querySelector(".total-discount-price");
+    discountElement.innerText = "$" + discount.toFixed(2);
+
+    var totalPriceElement = document.querySelector(".total-price");
+    totalPriceElement.innerText = "$" + total.toFixed(2);
 }

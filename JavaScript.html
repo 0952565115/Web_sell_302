@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compation" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MAEJO University Shop</title>
+    <title>Re:Zero Figure Shop</title>
     <!-- Lihk To CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Box Icons -->
@@ -15,9 +15,10 @@
     <header>
         <!-- Nav -->
         <div class="nav head-container">
-            <a href="#" class="logo">MAEJO University</a>
+            <a href="#" class="logo">Re:Zero figure</a>
             <!-- Cart-Icon -->
-            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+            <!--<i class='bx bx-shopping-bag' id="cart-icon"></i>-->
+            <i class='bx bx-cart-alt' id="cart-icon"></i>
             <!-- Cart -->
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
@@ -25,10 +26,38 @@
                 <div class="cart-content">
                     
                 </div>
+                <!-- Full-Total -->
+                <div class="full-total">
+                    <div class="full-total-title">Full Total</div>
+                    <div class="full-total-price">$0.00</div>
+                </div>
+                <!-- Total-Discount -->
+                <div class="total-discount">
+                    <div class="total-discount-title">Discount</div>
+                    <div class="total-discount-price">$0.00</div>
+                </div>
                 <!-- Total -->
                 <div class="total">
                     <div class="total-title">Total</div>
-                    <div class="total-price">$0</div>
+                    <div class="total-price">$0.00</div>
+                </div>
+                <div class="shipping-form">
+                    <h2>Shipping Information</h2>
+                    <form id="shipping-form">
+                        <div class="name-form">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" rows="4" required></textarea>
+                        
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+                        
+                        <label for="zipcode">Zip Code:</label>
+                        <input type="text" id="zipcode" name="zipcode" required>
+                    </form>
                 </div>
                 <!-- Buy Button -->
                 <button type="button" class="btn-buy">Buy Now</button>
@@ -37,6 +66,14 @@
             </div>
         </div>
     </header>
+    <div class="wrapper-container">
+        <div class="wrapper">
+            <img src="REM-wrapper-1.jpg" alt="">
+            <img src="REM-wrapper-2.jpg" alt="">
+            <img src="REM-wrapper-3.jpg" alt="">
+            <img src="REM-wrapper-4.jpg" alt="">
+        </div>
+    </div>
     <!-- Shop -->
     <section class="shop container">
         <h2 class="section-title">フィギュア</h2>
@@ -47,42 +84,42 @@
                 <img src="FIGURE-REM-1.jpg" alt="" class="product-img">
                 <h2 class="product-title">Re:Zero 1</h2>
                 <span class="price">$1100</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+                <i class='bx bx bx-cart-alt add-cart'></i>
             </div>
             <!-- Box 2 -->
             <div class="product-box">
                 <img src="FIGURE-REM-2.jpg" alt="" class="product-img">
                 <h2 class="product-title">Re:Zero 2</h2>
                 <span class="price">$1650</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+                <i class='bx bx bx-cart-alt add-cart'></i>
             </div>
             <!-- Box 3 -->
             <div class="product-box">
                 <img src="FIGURE-REM-3.jpg" alt="" class="product-img">
                 <h2 class="product-title">Re:Zero 3</h2>
-                <span class="price">$1100</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+                <span class="price">$1300</span>
+                <i class='bx bx bx-cart-alt add-cart'></i>
             </div>
             <!-- Box 4 -->
             <div class="product-box">
                 <img src="FIGURE-REM-4.jpg" alt="" class="product-img">
                 <h2 class="product-title">Re:Zero 4</h2>
-                <span class="price">$1100</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+                <span class="price">$980</span>
+                <i class='bx bx bx-cart-alt add-cart'></i>
             </div>
             <!-- Box 5 -->
             <div class="product-box">
                 <img src="FIGURE-REM-5.jpg" alt="" class="product-img">
                 <h2 class="product-title">Re:Zero 5</h2>
-                <span class="price">$1100</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+                <span class="price">$790</span>
+                <i class='bx bx bx-cart-alt add-cart'></i>
             </div>
             <!-- Box 6 -->
             <div class="product-box">
                 <img src="FIGURE-REM-6.jpg" alt="" class="product-img">
                 <h2 class="product-title">Re:Zero 6</h2>
-                <span class="price">$1100</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
+                <span class="price">$890</span>
+                <i class='bx bx bx-cart-alt add-cart'></i>
             </div>
         </div>
     </section>
